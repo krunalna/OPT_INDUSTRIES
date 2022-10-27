@@ -14,11 +14,18 @@ Github Repo for coding challenge of OPT Industries
 
 ## Installation
 
-Clone this repository by using below command
+Clone this repository by using below command if you have GIT LFS installed.
 
 ```bash
    git clone https://github.com/krunalna/OPT_INDUSTRIES.git
 ```
+If you don't have GIT LFS installed, you'll need to manually download the files.
+
+    1. Open https://github.com/krunalna/OPT_INDUSTRIES.git in any browser of your choice.
+    2. You'lll see a Green button named "Code". Click on it.
+    3. Click on Download Zip from there and the downloading should start.
+    4. Once Downloaded, follow the rest of the instructions.
+    
 
 Go to your the location and run the following command. 
 Please Note: It is assumed that you have already installed docker. If not please refer official documentation
