@@ -28,7 +28,7 @@ If you don't have GIT LFS installed, you'll need to manually download the files.
 
 
 Go to your the location and run the following command. 
-Please Note: It is assumed that you have already installed docker. If not please refer official documentation
+Please Note: It is assumed that you have already installed docker and docker daemon running. If not please refer official documentation for installation and run the docker daemon.
 
 ```bash
 
