@@ -25,7 +25,7 @@ If you don't have GIT LFS installed, you'll need to manually download the files.
     2. You'lll see a Green button named "Code". Click on it.
     3. Click on Download Zip from there and the downloading should start.
     4. Once Downloaded, follow the rest of the instructions.
-    
+
 
 Go to your the location and run the following command. 
 Please Note: It is assumed that you have already installed docker. If not please refer official documentation
@@ -34,7 +34,7 @@ Please Note: It is assumed that you have already installed docker. If not please
 
     docker import krunal_code.tar <your_name>:latest
     docker images
-    docker run -t <your_name>:latest bash
+    docker run -it <your_name>:latest bash
 ```
 
 Replace <your_name> with any name variable name you want.
@@ -47,22 +47,14 @@ You'll need to get the container id  of the docker image you just ran by using t
     docker ps -a
 ```
 
-After getting the container ID, store it in a ENV variable by using the following command
-
-```bash
-
-    export CID = <container_id>
-```
-
-Replace <container_id> with the id that you just copied.
+Copy the container id. 
 
 Now, we are done with setting up the docker container. We can proceed with running our actual code.
 
 Important point to remember: Each time you open a new terminal, you'll have to run the following command first.
 Lets call this command as MAIN command.
 ``` bash
-    docker exec -it $CID bash
-
+    docker exec -it <container_id> bash
 ```
 
 Once you have executed the above command, you open a new terminal in the docker environment. You can verfiy
@@ -94,7 +86,7 @@ This commands sources the ROS environments and starts the roscore. Keep this ter
 Lastly, Open a third terminal and execute the MAIN Command first.
 
 ``` bash
-    d root/catkin_ws && source /opt/ros/noetic/setup.bash && source devel/setup.bash && rosrun OPT_INDUSTRIES talker.py
+    cd root/catkin_ws && source /opt/ros/noetic/setup.bash && source devel/setup.bash && rosrun OPT_INDUSTRIES talker.py
 ```
 
 You should now see an incrementing integer displayed on the terminal. This incrementing integer is fetched from the Flask app that is running 
